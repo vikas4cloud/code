@@ -1,0 +1,38 @@
+gcloud compute instances create batch17
+gcloud compute instances create batch18 --zone us-central1-a
+gcloud compute instances list
+
+gcloud compute instances delete batch17 
+
+gcloud compute instances delete batch19
+gcloud compute ssh batch17
+exit
+gcloud compute ssh batch18
+
+
+If you do not specify additional parameters, such as a zone, Google Cloud will use your information from your default project. You can view your project information using the following gcloud command
+
+gcloud compute project-info describe
+gcloud compute instances create ace-instance-2 --zone us-central1-a
+gcloud compute instances list
+gcloud compute instances describe INSTANCE-NAME
+gcloud compute instances stop INSTANCE-NAME
+gcloud compute instances start INSTANCE-NAME
+gcloud compute instances delete INSTANCE-NAME
+
+gcloud compute instances create batch17
+gcloud compute instances create batch18 --zone us-central1-a
+gcloud compute instances list
+
+gcloud compute instances delete batch17 
+
+gcloud compute instances delete batch19
+gcloud compute ssh batch17
+exit
+gcloud compute ssh batch18
+
+
+If you do not specify additional parameters, such as a zone, Google Cloud will use your information from your default project. You can view your project information using the following gcloud command
+
+
+
