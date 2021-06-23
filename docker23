@@ -1,0 +1,45 @@
+pull -- download 
+run   -- run the image and it will become container 
+iso file install -- vm (os) for me ?
+docker start -- start rthe container
+stop - stop the container 
+
+
+docker reg -- docker hub 
+docker pull hello-world
+
+docker run 
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 
+ 
+ 
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs th
+e
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent
+ it
+    to your terminal.
+	
+	
+	
+	docker run ubuntu    -- 
+	
+docker run -it ubuntu
+
+
+docker exec -it conid bin/bash
+
+
+OS java jenkins
+jenkins container 
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+
+
+cd /var/jenkins_home/secrets/initialAdminPassword
