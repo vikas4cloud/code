@@ -1,0 +1,60 @@
+docker run -p 80:80 nginx
+
+
+docker run --name docker-nginx -p 80:80 nginx
+
+
+docker run -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+mkdir -p ~/docker-nginx/html
+
+docker run -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+docker run -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+
+CREATE DATABASE vikastraining;
+
+
+
+
+use databasename
+
+CREATE DATABASE testdb;
+
+List Databases        \l   
+Connect to desire database    \c testdb;   
+
+ DROP DATABASE testdb;   delete the database 
+
+
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+
+CREATE TABLE DEPARTMENT(
+   ID INT PRIMARY KEY      NOT NULL,
+   DEPT           CHAR(50) NOT NULL,
+   EMP_ID         INT      NOT NULL
+);
+
+\d   list relationship(tables)
+\d company        -- open table company
+
+drop table department, company;
+
+
+
+
+
+
+ 
+
+
+
