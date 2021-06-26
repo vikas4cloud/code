@@ -1,0 +1,41 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+
+pull -- download the image frm docker hub 8lakhs 
+
+
+run - it will download the image (run) convert the image into container 
+
+
+hardware 
+os
+vlc
+
+abc.mp4
+
+
+
+docker run ubuntu
+exite 1 sec - killed ?
+
+docker run -it ubuntu  (first time)
+
+docker exec -it <conatinerid> /bin/bash
+
+
+
+
+web 
+docker run -p 81:80 nginx
+
+
+mkdir docker-nginx 
+cd docker-nginx
+mkdir html
+
+
+docker exec -it <Container ID> bin/bash
+
+docker run --name docker-nginx -p 80:80 nginx
+
+docker run -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
