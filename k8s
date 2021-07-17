@@ -1,0 +1,110 @@
+kubectl run nginx  --image=nginx:1.16    -- pod
+
+
+
+docker run nginx  -p 80:80 (expose)
+
+service -- expose to outside world 
+
+
+pod - nginx container 
+service - expose to internet with lb
+
+Kubectl get pods
+kubectl get svc
+kubectl get nodes
+
+kubectl create deployment pravinnginx --image=nginx
+
+
+
+deployment 
+
+ 
+pravinnginx-fb955d466-t6dmb
+
+logs
+
+pravinnginx-fb955d466-4lfkk   1/1     Running   0          5m17s
+pravinnginx-fb955d466-6k4cz   1/1     Running   0          7m51s
+pravinnginx-fb955d466-ctmtc   1/1     Running   0          7m51s
+pravinnginx-fb955d466-dvmq7   1/1     Running   0          7m51s
+pravinnginx-fb955d466-f9576   1/1     Running   0          7m51s
+
+pravinnginx-fb955d466-4lfkk   1/1     Running   0          6m30s
+pravinnginx-fb955d466-6k4cz   1/1     Running   0          9m4s
+pravinnginx-fb955d466-9gcr9   1/1     Running   0          5s
+pravinnginx-fb955d466-ctmtc   1/1     Running   0          9m4s
+pravinnginx-fb955d466-f9576 
+
+
+
+kubectl create ns dev    -- ns dev 
+
+
+
+vi newdev1.yaml
+
+kubectl apply -f newdev1.yaml
+
+--- 
+apiVersion: v1
+kind: Namespace
+metadata: 
+  name: dev2
+
+  be availabe at 1 PM 
+  
+  kubectl run httpd --image=httpd --port=80 --replicas=1 --expose
+
+
+kubectl run jenkins1 --image=jenkins:2.60.3
+
+kubectl exec -it jenkins1 
+
+
+kubectl run jenkins1 --image=jenkins:2.60.3
+
+service -- expose to outside world 
+
+2 nd service name -- make a service for all the pods  
+
+
+kubectl create deployment pravinnginx --image=nginx
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+spec:
+  selector:
+    matchLabels:
+      run: my-nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-nginx
+    spec:
+      containers:
+      - name: my-nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx
+  labels:
+    run: my-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: my-nginx
+
+
+3:30 pm   today
